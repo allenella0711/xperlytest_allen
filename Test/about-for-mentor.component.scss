@@ -1,0 +1,164 @@
+:host {
+  display: block;
+  background: white;
+  text-align: center;
+
+  /*Allen*/
+
+  .textonimage {
+        position: relative;
+        bottom: 0px;
+        top: 12px;
+  }
+
+  .skill {
+        margin: 60px 0px 0px 0px;
+        position: relative;
+        text-align: center;
+        color: black;
+  }
+
+  p.a { 
+       letter-spacing: 12px;
+  }
+
+  /*Allen*/
+
+
+
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 65px;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #9b9b9b;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .container-max-980 {
+    max-width: 980px;
+  }
+
+  section + section {
+    margin-top: 180px;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.heading {
+    background-image: url('../../assets/images/about/7.jpg');
+    background-size: cover;
+    padding-top: 50%;
+    width: 100%;
+    position: relative;
+
+    .header {
+      position: absolute;
+      font-family: PlayfairDisplay-Bold;
+      font-size: 48px;
+      font-weight: 400;
+      color: white;
+      max-width: 640px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+
+  section.why {
+    text-align: center;
+    .reasons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 4rem;
+
+      .reason {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 240px;
+
+        .description {
+          text-align: center;
+          font-size: 18px;
+          font-weight: 700;
+          color: #1b1b1b;
+          margin-top: 2rem;
+        }
+      }
+
+
+    }
+  }
+
+  section.easy-onboarding {
+    img {
+      margin-top: 3rem;
+      width: 75%;
+    }
+  }
+
+  section.accessibility {
+    img {
+      max-width: 960px;
+      margin-top: 60px;
+    }
+  }
+
+  section.quality {
+    margin-top: 180px;
+    img {
+      margin-top: 40px;
+      width: 75%;
+    }
+  }
+
+  section.connect {
+    margin-top: 240px;
+    .methods {
+      margin-top: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      a + a {
+        margin-left: 4rem;
+      }
+    }
+  }
+
+  section.cta {
+
+    margin-top: 240px;
+
+    h2 {
+      letter-spacing: 12px;
+      font-weight: 400;
+    }
+
+    .black {
+      background: black;
+      height: 504px;
+      width: 100%;
+      margin-top: 60px;
+
+      .apply {
+        font-family: PlayfairDisplay-Black;
+        font-size: 48px;
+        font-weight: 400;
+        color: white;
+        margin-top: 166px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}

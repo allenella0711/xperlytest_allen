@@ -1,0 +1,48 @@
+<mat-toolbar>
+  <div class="left">
+    <a routerLink="/calls">
+      <img class="logo" src="assets/images/experly-logo.png"/>
+    </a>
+  </div>
+
+  <div class="right">
+    <a routerLink="/about/mentor" class="text-button">For Mentors</a>
+    <a routerLink="/about/mentee" class="text-button">For Mentees</a>
+
+    <a *ngIf="authProvider.canBecomeExpert(authProvider.currentUser)"
+            (click)="openBecomeExpertDialog()"
+            class="text-button">
+      Become a Mentor
+    </a>
+    <a routerLink="/admin" *ngIf="authProvider.isAdmin(authProvider.currentUser)" class="text-button">
+      Admin
+    </a>
+    <a *ngIf="!authProvider.isAuthenticated()" (click)="openAuthDialog('login')" class="text-button">
+      Sign In
+    </a>
+
+    <a [matMenuTriggerFor]="exploreMenu" *ngIf="authProvider.isAuthenticated()" class="text-button">
+      Explore
+    </a>
+
+    <mat-icon style="margin-left: 2rem">account_circle</mat-icon>
+    <!--<button mat-icon-button [matMenuTriggerFor]="exploreMenu" *ngIf="authProvider.isAuthenticated()">-->
+      <!--<mat-icon class="kc-app-toolbar-icon" matBadge="1" matBadgeOverlap="true" *ngIf="room && !notified">account_circle</mat-icon>-->
+
+    <!--</button>-->
+  </div>
+
+</mat-toolbar>
+
+<mat-menu #exploreMenu="matMenu" [hidden]="!authProvider.isAuthenticated()">
+  <!--<button class="btn" mat-menu-item *ngIf="authProvider.isAuthenticated() && room && !notified" (click)="answerCall()">Answer</button>-->
+  <!--<button class="btn" mat-menu-item *ngIf="authProvider.isAuthenticated() && room && !notified" (click)="dismissCall()">Dismiss</button>-->
+
+  <button class="btn" mat-menu-item *ngIf="authProvider.isExpert(authProvider.currentUser)" (click)="openExpertProfileDialog()">X-Profile</button>
+  <!--<button class="btn" mat-menu-item *ngIf="authProvider.canBecomeExpert(authProvider.currentUser)" (click)="openBecomeExpertDialog()">Become an expert</button>-->
+  <button class="btn" mat-menu-item *ngIf="authProvider.isExpert(authProvider.currentUser)" (click)="openExpertTimeSlot()">My Times</button>
+  <button class="btn" mat-menu-item *ngIf="authProvider.isAuthenticated()" (click)="openUserProfileDialog()">My Profile</button>
+  <a class="btn" mat-menu-item routerLink="/calls" *ngIf="authProvider.isAuthenticated()">My Calls</a>
+  <!--<button class="btn" mat-menu-item *ngIf="authProvider.isAuthenticated()">Billing</button>-->
+  <button class="btn" mat-menu-item *ngIf="authProvider.isAuthenticated()" (click)="logout()">Logout</button>
+</mat-menu>

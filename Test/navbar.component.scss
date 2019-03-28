@@ -1,0 +1,43 @@
+:host {
+  .mat-toolbar{
+    height: 60px;
+    color: white;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      .logo{
+        margin-left: 40px;
+        margin-right: 20px;
+        width: 24px;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .text-button {
+        margin: 0px 12px;
+        color: white;
+        background: none;
+        border: none;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          border-bottom: 3px solid #3db39e;
+        }
+      }
+
+      .text-button + .text-button {
+        margin-left: 1rem;
+      }
+    }
+
+  }
+
+}
