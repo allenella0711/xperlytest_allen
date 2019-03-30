@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+
+<section class="heading">
+  <div class="header">The most dedicated Mentorship On-Demand</div>
+</section>
+
+<section class="what-we-offer">
+  <p class="what-we-offer-title">WHAT WE OFFER</p>
+  <h2>GREAT MENTORSHIP</h2>
+  <img class="great-mentors" src="assets/images/about/great-mentors.jpg">
+  <img class="for" src="assets/images/about/for.png">
+  <h3>YOUR CAREER SUCCESS</h3>
+</section>
+
+
+<section class="one-on-one">
+  <div class="text">
+    <h5>DEDICATED MENTORSHIP</h5>
+    <h4>One on One with Industry Experts</h4>
+  </div>
+</section>
+
+<section class="industry">
+  <p class="title">TOP EXPERTS FROM</p>
+  <div class="card-group">
+    <div class="industry-card" *ngFor="let industry of INDUSTRIES" [style.background-image] = "'url(' + industry.imageUrl +')'">
+      <div class="name">{{industry.name}}</div>
+    </div>
+  </div>
+</section>
+
+<section class="strength-and-weakness">
+  <div class="text">
+    <h4>REALISTIC SOLUTIONS</h4>
+    <h2>IDENTIFY YOUR STRENGTHS AND WEAKNESSES</h2>
+  </div>
+</section>
+
+
+<section class="easy-onboarding">
+  <h4>EASY ONBOARDING</h4>
+  <h2>4 Easy Steps to Start a Great Conversation</h2>
+  <img src="assets/images/about/4.png">
+</section>
+
+<div class="right">
+  <h4>ACCESSIBILITY</h4>
+  <h2>Available Cross Platform</h2>
+</div>
+
+<section class="platform">
+  <div class="center">
+    <img src="assets/images/about/5.png">
+
+  </div>
+</section>
+
+<section class="quality">
+  <h4>QUALITY</h4>
+  <h2>Industry Leading <br> Video Conferencing Solutions</h2>
+  <img src="assets/images/about/6.png">
+</section>
+
+<section class="cta">
+  <p class="title">WHAT ARE YOU WAITING FOR?</p>
+  <div class="wrapper">
+    <div class="text">
+      <div class="left">Find the perfect mentor to step up your career</div>
+      <div class="middle">OR</div>
+      <div class="right">Become a mentor on Xperly and start earning</div>
+    </div>
+    <app-button-with-arrow class="button" color="#147af0">Sign Up Now</app-button-with-arrow>
+  </div>
+
+</section>
