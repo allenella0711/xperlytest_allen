@@ -1,0 +1,139 @@
+:host {
+  section.top-main {
+    width: 100%;
+    padding: 25px;
+
+    .image {
+      background: url('../../assets/images/bg_img.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: relative;
+      width: 100%;
+      padding-top: 42.88%;
+
+      .text-container {
+        position:  absolute;
+        left: 36px;
+        bottom: 72px;
+        right: 0px;
+        color: white;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .text {
+          width: 444px;
+          margin-right:5rem;
+          h1 {
+            font-family: PlayfairDisplay-Bold, Roboto, Helvetica, sans-serif;
+            color: white;
+            margin-top: -2rem;
+            font-size: 48px;
+            margin-bottom: 2rem;
+          }
+
+          h2 {
+            font-size: 18px;
+            font-family: OpenSans-SemiBoldItalic;
+          }
+
+          app-button-with-arrow {
+            margin-top: 4rem;
+          }
+        }
+      }
+    }
+  }
+
+  section.industry {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0 3rem;
+
+    .industry-card.all-industries {
+      background-image: url('../../assets/images/industries/all.png');
+    }
+
+    .industry-card {
+      display: inline-flex;
+      flex-direction: column-reverse;
+      cursor: pointer;
+
+      background-size: cover;
+
+      height: 280px;
+      width: 200px;
+      margin: 0 12px;
+
+      .name {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: .5rem;
+        font-family: OpenSans-Bold;
+      }
+
+    }
+  }
+
+  section.mentors {
+    margin: 72px 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    min-height: 400px;
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .mentor-list {
+      width: 100%;
+      overflow-x: auto;
+      .mentor-item {
+        display: inline-block;
+        width: 250px;
+        min-height: 350px;
+        .mentor-image {
+          object-fit: cover;
+          width: 250px;
+          height: 250px;
+          border-radius: 5px;
+        }
+        .mentor-info {
+          margin-top: 1rem;
+          white-space: normal;
+
+          .mentor-title {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #469191;
+            font-weight: bold;
+          }
+          .mentor-info-description {
+            font-size: 16px;
+            font-weight: bold;
+            height: 50px;
+            overflow-y: auto;
+            color: #1b1b1b;
+          }
+          .mentor-charge-rate {
+            font-size: 12px;
+            font-weight: light;
+            color: #333333;
+            margin-bottom: 0.2rem;
+          }
+          .mentor-location {
+            font-size: 12px;
+            font-weight: semibold;
+            color: #9b9b9b;
+          }
+        }
+      }
+      .mentor-item + .mentor-item {
+        margin-left: 36px;
+      }
+    }
+
+  }
+}

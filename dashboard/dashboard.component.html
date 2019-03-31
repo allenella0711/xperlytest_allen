@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<section class="top-main">
+
+  <div class="image">
+    <div class="text-container">
+      <div class="text">
+        <h1>Dedicated <br>Career Mentorship <br> On-Demand</h1>
+        <h2>Our powerful AI system ensures the best match between mentors and mentees</h2>
+        <app-button-with-arrow (onClick)="openUserProfileDialog()">Create Your Profile</app-button-with-arrow>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="industry">
+  <div class="industry-card all-industries" (click)="selectedIndustry = 'All'">
+    <div class="name">All</div>
+  </div>
+  <div class="industry-card" *ngFor="let industry of INDUSTRIES" [style.background-image] = "'url(' + industry.imageUrl +')'" (click)="selectedIndustry = industry.name">
+      <div class="name">{{industry.name}}</div>
+  </div>
+</section>
+
+<section class="mentors">
+  <h2 class="title">Suggested Mentors</h2>
+  <div class="mentor-list">
+    <div class="mentor-item" *ngFor="let profile of expertProfiles$ | async" (click)="openProfile(profile)" [hidden]="!shouldShowMentor(profile)">
+      <img class="mentor-image" *ngIf="profile.profile_picture_url" [src]="profile.profile_picture_url">
+      <img class="mentor-image" *ngIf="!profile.profile_picture_url" src="assets/images/avatar.png">
+      <div class="mentor-info">
+        <h6 class="mentor-title">{{profile.profession}}</h6>
+        <p class="mentor-info-description">{{profile.highlight}}</p>
+        <p class="mentor-charge-rate">${{profile.charge_rate}} CAD per session</p>
+        <p class="mentor-location">Toronto, Canada</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
